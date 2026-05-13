@@ -4,12 +4,13 @@
  * Plugin URI: http://wordpress.org/plugins/custom-content-width/
  * Description: Adds a 'Custom Content Width' setting to the Settings > Media screen, to let users override their theme's content width.
  * Author: George Stephanis
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author URI: http://stephanis.info/
  */
 
 class Stephanis_Custom_Content_Width {
 	static $instance;
+	var $original_content_width = null;
 
 	function __construct() {
 		self::$instance = $this;
